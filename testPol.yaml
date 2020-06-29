@@ -4,5 +4,7 @@ metadata:
   name: test_policy
   namespace: wordpress
 spec:
-  podSelector:{}
+  podSelector:
+    matchLabels:
+      app: web
   ingress: []
