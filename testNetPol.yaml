@@ -1,0 +1,9 @@
+piVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: test_policy
+	namespace: wordpress
+spec:
+  podSelector:{}
+	ingess: []
+  
