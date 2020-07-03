@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: DatabaseRule
+spec:
+  podSelector:
+    matchLabels:
+      app: mariadb
+  ingress:
+    - from:
+      - podSelector:
+          matchLabels:
+            app: web
+      ports:
+      - protocol: TCP
+      port: 3306
+      
