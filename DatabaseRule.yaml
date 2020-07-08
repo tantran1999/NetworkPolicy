@@ -15,11 +15,4 @@ spec:
       ports:
       - protocol: TCP
         port: 3306
-    - from:
-      - podSelector:
-          matchLabels:
-            workload.user.cattle.io/workloadselector: deployment-wordpress-ubuntu-pentester-inside
-        ports:
-        - protocol: ICMP
-          port: 7
-      
+
