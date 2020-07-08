@@ -9,6 +9,7 @@ spec:
       app: web
   ingress:
     - from:
+      - podSelector: {}
       ports:
       - protocol: TCP
         port: 8080
