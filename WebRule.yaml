@@ -11,6 +11,6 @@ spec:
     - from:
       ports:
       - protocol: TCP
-        port: 80
+        port: 8080
       - protocol: TCP
-        port: 443
+        port: 8443
