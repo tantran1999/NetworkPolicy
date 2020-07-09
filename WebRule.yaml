@@ -10,16 +10,15 @@ spec:
   ingress:
       from:
           podSelector: {}
-          namespaceSelector: {}
-      - ports:
-        - protocol: TCP
-          port: 8080
-        - protocol: TCP
-          port: 8443
-        - protocol: TCP
-          port: 80
-        - protocol: TCP
-          port: 443
+        - ports:
+          - protocol: TCP
+            port: 8080
+          - protocol: TCP
+            port: 8443
+          - protocol: TCP
+            port: 80
+          - protocol: TCP
+            port: 443
 
       
 
