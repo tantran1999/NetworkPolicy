@@ -8,16 +8,18 @@ spec:
     matchLabels:
       app: web
   ingress:
-    - ports:
-      - port: 8080
-      - port: 8443
-      from: []
-      
+  - {}
   egress:
-    - to:
-      - podSelector:
-          matchLabels:
-            app: mariadb
-        ports:
-        - protocol: TCP
-          port: 3306
+  - to:
+    - namespaceSelector:
+        matchLabels:
+          namespace: kube-system
+    ports:
+    - protocol: UDP
+      port: 53
+  - to:
+    - podSelector:
+        matchLabels:
+          app: mariadb
+
+
