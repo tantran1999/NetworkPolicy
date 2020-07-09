@@ -8,7 +8,10 @@ spec:
     matchLabels:
       app: web
   ingress:
-      ports:
+      from:
+          podSelector: {}
+          namespaceSelector: {}
+      - ports:
         - protocol: TCP
           port: 8080
         - protocol: TCP
@@ -17,8 +20,6 @@ spec:
           port: 80
         - protocol: TCP
           port: 443
-      - from:
-          podSelector: {}
-          namespaceSelector: {}
+
       
 
