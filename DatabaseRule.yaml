@@ -15,4 +15,17 @@ spec:
       ports:
       - protocol: TCP
         port: 3306
+  egress:
+    - to:
+      - podSelector:
+          matchLabels:
+            app: web
+    - to:
+      - namespaceSelector:
+          matchLabels:
+            namespace: kube-system
+      ports:
+      - protocol: UDP
+        port: 53
+          
 
