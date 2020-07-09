@@ -20,12 +20,6 @@ spec:
       - podSelector:
           matchLabels:
             app: web
-    - to:
-      - namespaceSelector:
-          matchLabels:
-            namespace: kube-system
-      ports:
-      - protocol: UDP
-        port: 53
+
           
 
